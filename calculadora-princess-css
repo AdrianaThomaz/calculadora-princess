@@ -1,0 +1,34 @@
+/* comentario em css
+  */
+    
+    /*     seletor pra elemento <p> */
+      p { font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FF0000;
+        } 
+        .container {
+            background-color: #008000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            margin: 5px 5px 0 0;
+            padding: 10px;
+            width: calc(25% - 10px);
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
