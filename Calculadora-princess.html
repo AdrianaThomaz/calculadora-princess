@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FF0000;
+        }
+        .container {
+            background-color: #008000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            margin: 5px 5px 0 0;
+            padding: 10px;
+            width: calc(25% - 10px);
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora Simples</h2>
+        <input type="number" id="valor1" placeholder="Valor 1">
+        <input type="number" id="valor2" placeholder="Valor 2">
+        <div>
+            <button onclick="calcular('soma')">Somar</button>
+            <button onclick="calcular('subtracao')">Subtrair</button>
+            <button onclick="calcular('multiplicacao')">Multiplicar</button>
+            <button onclick="calcular('divisao')">Dividir</button>
+        </div>
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        function calcular(operacao) {
+            const valor1 = parseFloat(document.getElementById('valor1').value);
+            const valor2 = parseFloat(document.getElementById('valor2').value);
+            let resultado;
+
+            switch (operacao) {
+                case 'soma':
+                    resultado = valor1 + valor2;
+                    break;
+                case 'subtracao':
+                    resultado = valor1 - valor2;
+                    break;
+                case 'multiplicacao':
+                    resultado = valor1 * valor2;
+                    break;
+                case 'divisao':
+                    resultado = valor1 / valor2;
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
+
